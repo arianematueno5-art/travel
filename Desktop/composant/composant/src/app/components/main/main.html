@@ -1,0 +1,19 @@
+<div class="flex flex-wrap gap-5 p-8 bg-gray-100 ">
+
+  @for (p of personnes; track p.id) {
+
+    <div class="bg-white border border-gray-200 rounded-lg p-5 w-52">
+
+      <h2 class="font-bold text-gray-800 border-b pb-2 mb-3">
+        <!-- Interpolation : affiche p.prenom et p.nom -->
+        {{ p.prenom }} {{ p.nom }}
+      </h2>
+
+      <div class="space-y-1 text-sm text-gray-600">
+        <p><span class="font-semibold">ID :</span> {{ p.id }}</p>
+        <p><span class="font-semibold">Sexe :</span> {{ p.sexe }}</p>
+        <p><span class="font-semibold">Âge :</span> {{ p.age }} ans</p>
+      </div>
+    </div>
+  }
+  
